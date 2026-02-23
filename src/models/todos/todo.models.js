@@ -8,17 +8,17 @@ const todoSchema = new mongoose.Schema({
         required: true,
     },
     complete:{
-        type: true,
+        type: Boolean,
         default: false
     },
     createdBy:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: User
+        ref: "User"
     },
     subTodos: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: SubTodo
+            ref: "SubTodo"
         }
     ] // Arrays of SubTodo
 },{ timestamps: true})
