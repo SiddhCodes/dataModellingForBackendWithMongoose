@@ -1,6 +1,4 @@
 import mongoose from "mongoose";
-import { User } from "./user.models";
-import { SubTodo } from "./sub_todo.models";
 
 const todoSchema = new mongoose.Schema({
     content:{
